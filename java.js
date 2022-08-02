@@ -1,5 +1,6 @@
 let faders  = document.querySelectorAll('iod')
 let butoane = document.querySelectorAll('.button')
+let images = document.querySelectorAll('.images')
 let carus   = document.querySelectorAll('.carus')
 let carus1  = document.querySelectorAll('.carus1')
 let nothing = document.querySelectorAll('.nothing')
@@ -31,6 +32,8 @@ let ium3    = document.querySelector('.ium3')
 let ium4    = document.querySelector('.ium4')
 let prev    = document.querySelector('prev')
 let next    = document.querySelector('next')
+let butonase= document.querySelector('butonase')
+let butonase1= document.querySelector('butonase1')
 let prev1   = document.querySelector('prev1')
 let next1   = document.querySelector('next1')
 let bloc    = document.querySelector('block')
@@ -135,7 +138,6 @@ next1.onclick=function(){
     return;
     }
   count1++;
-  console.log(count1)
   slider1.style.transition=".4s";
   slider1.style.left=-167.5*(count1-3)+"px";
   carus1[count1].style.height = "270px";
@@ -150,7 +152,6 @@ if(count1<1){
 return;
 }
 count1--;
-console.log(count1)
 slider1.style.left=-167.5*(count1-3)+"px";
 slider1.style.transition=".4s";
 carus1[count1].style.height = "270px";
@@ -161,7 +162,6 @@ carus1[count1+1].style.width = "160px";
 carus1[count1+1].style.filter = "saturate(10%)";
 }
 slider1.addEventListener('transitionend',()=>{
-console.log("ok")
   if (carus1[count1].id === 'firstclone1'){
   slider1.style.left="-335px"
 count1=5;
@@ -243,7 +243,39 @@ function myFunction(x) {
     shop.remove()
     bloc.append(search,logo,shop)
     bloc.classList.add("k1")
+    butonase.style.width="100%"
+    butonase1.style.width="100%"
+    images.forEach(e=>{
+    e.style.height="210px"
+    e.style.width="140px"
+    })
+    im2.style.transform="translateY(-85px)translateX(100px)"
+    im3.style.transform="translateY(140px)translateX(70px)"
+    im1.style.transform="translateY(-130px)translateX(-60px)"
+    im4.style.transform="translateY(100px)translateX(-90px)"
+    ium2.style.transform="translateY(-85px)translateX(100px)"
+    ium3.style.transform="translateY(140px)translateX(70px)"
+    ium1.style.transform="translateY(-130px)translateX(-60px)"
+    ium4.style.transform="translateY(100px)translateX(-90px)"
+    bloc.style.height="35px"
+    header.style.height="45px"
     } else {
+    im1.style.transform="translateY(-165px)translateX(-85px)"
+    im2.style.transform="translateY(-120px)translateX(115px)"
+    im3.style.transform="translateY(165px)translateX(85px)"
+    im4.style.transform="translateY(120px)translateX(-115px)"
+    ium1.style.transform="translateY(-165px)translateX(-85px)"
+    ium2.style.transform="translateY(-120px)translateX(115px)"
+    ium3.style.transform="translateY(165px)translateX(85px)"
+    ium4.style.transform="translateY(120px)translateX(-115px)"
+    bloc.style.height="50px"
+    header.style.height="60px"
+      images.forEach(e=>{
+        e.style.height="270px"
+        e.style.width="180px"
+        })
+      butonase1.style.width="500px"
+      butonase.style.width="500px"
       bloc.classList.remove("k1")
       shop.remove()
       search.remove()    
