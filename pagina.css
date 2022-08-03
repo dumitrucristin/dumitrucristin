@@ -52,7 +52,7 @@ animation: 0.75s whiterer1 ease-in;
 background-color: rgba(0,0,0,0);
 }
 footer,.conteiner{
-    height: 50%;
+    height: 400px;
     background-color: black;
     display: flex;
     align-items: center;
@@ -63,6 +63,7 @@ footer,.conteiner{
 .conteiner{
     align-items: baseline;
     width: 200px;
+    transform: translateX(-10px);
 }
 .contactele{
 max-width: 30px;
