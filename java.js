@@ -329,7 +329,7 @@ function myFunction(x) {
   b.append(newspan);
   addEventListener('resize',function(){
   the = document.querySelector('span')
-  b.style.fontSize=innerWidth/20;
+  b.style.fontSize=innerWidth/22;
   b1.style.fontSize=innerWidth/30;
   colors.style.fontSize=innerWidth/22;
   the.style.fontSize=innerWidth/40;
