@@ -75,7 +75,7 @@ window.addEventListener("load", async function () {
   }
 
   // Fetch JSON data for users
-  const res = await fetch("http://localhost:8000/albums.json");
+  const res = await fetch("https://dumitrucristin.github.io/dumitrucristin/albums.json");
   const users = await res.json();
 
   // Handle login form submission
