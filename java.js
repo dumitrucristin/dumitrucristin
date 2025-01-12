@@ -336,7 +336,7 @@ addEventListener("resize", function () {
   filter.style.height = innerWidth / 1.8;
 });
 window.addEventListener("load", async function () {
-  const res = await fetch("http://localhost:8000/albums.json");
+  const res = await fetch("albums.json");
   let array = await res.json();
   console.log(array[0]);
 
